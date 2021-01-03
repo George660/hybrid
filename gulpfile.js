@@ -52,10 +52,10 @@ function watch(done) {
 }
 
 function reload(done) {
-    browserSync.reload();
+    browserSync.reload;
     done();
 }
-
+// gulp.watch("./css/Style.css").on("change", reload);
 gulp.task("copy:html", tasks.copyHtml);
 gulp.task("copy:css", tasks.copyCss);
 gulp.task("copy:assets", tasks.copyAssets);
