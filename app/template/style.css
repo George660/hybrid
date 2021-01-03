@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: cursive;
+    font-family: "montserrat";
 }
 .header {
     margin: 0 auto;
@@ -12,13 +12,16 @@
     width: 85%;
     margin: 0 auto;
 }
+.header {
+    padding: 20px 0px;
+}
 .header-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .header-link {
-    width: 18%;
+    width: 25%;
 }
 
 img {
@@ -30,7 +33,7 @@ ul {
     color: black;
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 100%;
 }
 a {
     text-decoration: none;
@@ -45,22 +48,30 @@ li {
 }
 .header-content {
     padding-top: 50px;
-    width: 50%;
+    width: 100%;
 }
 .header-text h1 {
     font-size: 39px;
     line-height: 4rem;
 }
+
 .header-text p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
     line-height: 2.5rem;
+    width: 70%;
 }
 .header-button {
-    width: 42%;
+    width: 20%;
     display: flex;
     justify-content: space-between;
 }
+@media only screen and (max-width: 520px) {
+    .header-button {
+        width: 60%;
+    }
+}
+
 .header-button a {
     border: 1px solid #d82f62;
     padding: 10px 10px;
@@ -80,7 +91,13 @@ li {
 
 .feature-container {
     width: 50%;
-    padding: 90px 0px 40px;
+    padding: 90px 0px 70px;
+}
+
+@media only screen and (max-width: 520px) {
+    .feature-container {
+        width: 100%;
+    }
 }
 .feature-hero h1 {
     display: contents;
@@ -98,10 +115,65 @@ li {
 }
 .feature-text p {
     font-family: "Montserrat", sans-serif;
-    line-height: 2rem;
+    line-height: 3rem;
     font-size: 23px;
     font-weight: 200;
 }
-.clip-me {
+.clip-two {
+    width: 20%;
+    height: 40%;
+    border-radius: 100%;
+    position: absolute;
+    background: #ff000017;
+    top: 30%;
+    right: 50%;
     clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.feature:nth-of-type(odd) {
+    background: #d8d1d11f;
+}
+.clip-one {
+    width: 20%;
+    height: 40%;
+    border-radius: 100%;
+    position: absolute;
+    background: #ff000040;
+    top: 30%;
+    right: 20%;
+}
+
+@media only screen and (max-width: 520px) {
+    .header-text h1 {
+        font-size: 25px;
+        line-height: 2.4rem;
+    }
+    .header-text p {
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        line-height: 2rem;
+        width: 100%;
+    }
+    .clip-one,
+    .clip-two {
+        width: 22%;
+        height: 14%;
+    }
+    .feature-hero h1 {
+        display: contents;
+        line-height: 50px;
+        font-size: 22px;
+    }
+    .feature-container {
+        padding: 43px 0px 40px;
+    }
+    .feature-hero::before {
+        height: 26px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .header-button {
+        width: 91%;
+    }
 }
