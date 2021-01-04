@@ -3,6 +3,11 @@
     margin: 0;
     font-family: "montserrat";
 }
+
+.hamburger {
+    display: none;
+}
+
 .header {
     margin: 0 auto;
     /* width: 90%; */
@@ -37,7 +42,7 @@ ul {
 }
 a {
     text-decoration: none;
-    color: #00000;
+    color: #000000;
 }
 /* rgb(216,47,98) */
 a:hover {
@@ -143,6 +148,61 @@ li {
     right: 20%;
 }
 
+/**footer styling starts here**/
+
+.links {
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+}
+ul.links-list {
+    display: flex;
+    align-items: center;
+}
+ul.links-list li {
+    text-align: center;
+}
+
+.links-list img {
+    width: 30%;
+}
+.links h4 {
+    line-height: 4rem;
+    text-align: center;
+    font-size: 30px;
+}
+.links-download {
+    width: 45%;
+}
+footer {
+    background: black;
+    padding: 20px;
+}
+footer p {
+    color: white;
+    text-align: center;
+}
+@media only screen and (max-width: 1000px) {
+    .header-button {
+        width: 44%;
+    }
+    .header-link {
+        width: 72%;
+    }
+    .feature-container {
+        width: 82%;
+        padding: 90px 0px 70px;
+    }
+    .clip-one,
+    .clip-two {
+        height: 20%;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .header-mobile {
+        display: none;
+    }
+}
 @media only screen and (max-width: 520px) {
     .header-text h1 {
         font-size: 25px;
@@ -171,9 +231,31 @@ li {
     .feature-hero::before {
         height: 26px;
     }
+    ul.links-list {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .links-list img {
+        width: 25%;
+    }
+    .feature-text p {
+        font-size: 18px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    .links-download {
+        width: 80%;
+    }
 }
 @media only screen and (max-width: 420px) {
     .header-button {
         width: 91%;
+    }
+    .links-list img {
+        width: 20%;
+    }
+    .feature-hero h1 {
+        font-size: 20px;
     }
 }
