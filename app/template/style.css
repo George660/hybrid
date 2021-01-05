@@ -99,11 +99,6 @@ li {
     padding: 90px 0px 70px;
 }
 
-@media only screen and (max-width: 520px) {
-    .feature-container {
-        width: 100%;
-    }
-}
 .feature-hero h1 {
     display: contents;
     line-height: 4rem;
@@ -215,6 +210,9 @@ footer p {
         line-height: 2rem;
         width: 100%;
     }
+    .feature-container {
+        width: 100%;
+    }
     .clip-one,
     .clip-two {
         width: 22%;
@@ -257,5 +255,16 @@ footer p {
     }
     .feature-hero h1 {
         font-size: 20px;
+        line-height: 35px;
+    }
+    .feature-container {
+        width: 94%;
+    }
+    .feature-text p {
+        font-size: 17px;
+        line-height: 2.5rem;
+    }
+    .footer-container {
+        width: 90%;
     }
 }
