@@ -3,6 +3,9 @@
     margin: 0;
     font-family: "montserrat";
 }
+a {
+    cursor: pointer;
+}
 
 .hamburger {
     display: none;
@@ -20,17 +23,23 @@
 .header {
     padding: 20px 0px;
 }
+.header-list {
+    z-index: 1;
+}
 .header-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 2;
 }
 .header-link {
     width: 25%;
+    z-index: 2;
 }
 
 img {
     width: 40%;
+    cursor: pointer;
 }
 ul {
     list-style-type: none;
@@ -70,11 +79,17 @@ li {
     width: 20%;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
 }
-
+.header-logo {
+    cursor: pointer;
+    z-index: 2;
+}
 .header-button a {
     border: 1px solid #d82f62;
     padding: 10px 10px;
+    cursor: pointer;
+    z-index: 2;
 }
 .header-button a.xpad {
     padding: 10px 20px;
@@ -151,10 +166,13 @@ ul.links-list {
 }
 ul.links-list li {
     text-align: center;
+    z-index: 2;
 }
 
 .links-list img {
     width: 30%;
+    cursor: pointer;
+    z-index: 2;
 }
 .links h4 {
     line-height: 4rem;
@@ -171,6 +189,133 @@ footer {
 footer p {
     color: white;
     text-align: center;
+}
+
+/**modal starts here**/
+
+.modal {
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    background-color: #000000a8;
+}
+
+.modal-container {
+    width: 80%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 100px 40px;
+    text-align: center;
+}
+.modal-container p {
+    line-height: 20px;
+}
+.modal-show {
+    display: flex;
+    opacity: 1;
+    height: 100vh;
+    transition: all 0.6s;
+    z-index: 3;
+}
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
+.modal-close img {
+    width: 20%;
+}
+/**mobile-nav stylings**/
+.mobile-nav {
+    display: none;
+}
+.mobile-toggle {
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+.mobile-toggle-zero {
+    width: 0;
+}
+.mobile-toggle::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    top: 8px;
+    transition: all 0.6s;
+}
+
+.mobile-toggle::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 8px;
+    transition: all 0.6s;
+}
+.mobile-toggle-jx {
+    width: 0;
+}
+.mobile-toggle-jx::before {
+    content: "";
+    transform: rotate(-45deg);
+    transform-origin: center;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    top: 0px;
+    transition: all 0.6s;
+}
+.mobile-toggle-jx::after {
+    content: "";
+    transform: rotate(45deg);
+    transform-origin: center;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0px;
+    transition: all 0.6s;
+}
+
+.mobile-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobile-logo {
+    width: 80%;
+}
+
+.mobile-logo img {
+    width: 80%;
+}
+.mobile-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mobile-list li {
+    z-index: 2;
+}
+
+.mobile-menu {
+    display: none;
+    transition: all 0.6s;
+}
+.mobile-menu-show {
+    display: block;
 }
 @media only screen and (max-width: 1000px) {
     .header-button {
@@ -189,8 +334,16 @@ footer p {
     }
 }
 @media only screen and (max-width: 760px) {
-    .header-mobile {
+    .header-nav {
         display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+        width: 92%;
+    }
+    .mobile-list li {
+        line-height: 30px;
     }
 }
 @media only screen and (max-width: 520px) {
@@ -246,6 +399,13 @@ footer p {
     .header-button {
         width: 60%;
     }
+    .modal-close {
+        right: -169px;
+        top: 54px;
+    }
+    .modal-close img {
+        width: 16%;
+    }
 }
 @media only screen and (max-width: 420px) {
     .header-button {
@@ -267,5 +427,9 @@ footer p {
     }
     .footer-container {
         width: 90%;
+    }
+    .modal-container {
+        padding: 100px 10px;
+        width: 94%;
     }
 }
