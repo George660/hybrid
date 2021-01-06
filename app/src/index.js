@@ -19,3 +19,11 @@ for (let i = 0; i < menuModal.length; i++) {
 modalCloseBtn.addEventListener("click", () => {
     modal.classList.remove("modal-show");
 });
+
+modal.addEventListener("click", e => {
+    if (e.target.classList.contains("modal")) {
+        modal.classList.remove("modal-show");
+    } else {
+        return;
+    }
+});

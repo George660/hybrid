@@ -348,6 +348,12 @@ footer p {
     .mobile-list li {
         line-height: 30px;
     }
+    .modal-close {
+        right: -100px;
+    }
+    .links-download {
+        width: 120%;
+    }
 }
 @media only screen and (max-width: 520px) {
     .header-text h1 {
