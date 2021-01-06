@@ -441,4 +441,13 @@ footer p {
         padding: 100px 10px;
         width: 94%;
     }
+    .modal-close img {
+        width: 11%;
+    }
+    .modal-close {
+        top: 37px;
+    }
+    .modal-text {
+        font-size: 25px;
+    }
 }
