@@ -6,6 +6,9 @@
 a {
     cursor: pointer;
 }
+.bold {
+    font-weight: 800;
+}
 
 .hamburger {
     display: none;
@@ -212,7 +215,7 @@ footer p {
     text-align: center;
 }
 .modal-container p {
-    line-height: 20px;
+    line-height: 25px;
 }
 .modal-show {
     display: flex;
